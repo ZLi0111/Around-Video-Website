@@ -13,7 +13,7 @@ const (
 func readFromES(query elastic.Query, index string) (*elastic.SearchResult, error) {
 	client, err := elastic.NewClient(
 		elastic.SetURL(ES_URL),
-		elastic.SetBasicAuth("elastic", "12345678"))
+		elastic.SetBasicAuth("elastic", ""))
 	if err != nil {
 		return nil, err
 	}
