@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	BUCKET_NAME = "lzr-bucket"
+	BUCKET_NAME = ""
 )
 
 func saveToGCS(r io.Reader, objectName string) (string, error) {

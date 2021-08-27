@@ -12,6 +12,7 @@ import (
 
 func main() {
 	fmt.Println("started-service")
+
 	jwtMiddleware := jwtmiddleware.New(jwtmiddleware.Options{
 		ValidationKeyGetter: func(token *jwt.Token) (interface{}, error) {
 			return []byte(mySigningKey), nil

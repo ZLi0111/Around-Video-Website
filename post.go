@@ -20,6 +20,7 @@ type Post struct {
 }
 
 func searchPostsByUser(user string) ([]Post, error) {
+
 	query := elastic.NewTermQuery("user", user)
 	searchResult, err := readFromES(query, POST_INDEX)
 	if err != nil {

@@ -33,7 +33,7 @@ func readFromES(query elastic.Query, index string) (*elastic.SearchResult, error
 func saveToES(i interface{}, index string, id string) error {
 	client, err := elastic.NewClient(
 		elastic.SetURL(ES_URL),
-		elastic.SetBasicAuth("elastic", "12345678"))
+		elastic.SetBasicAuth("elastic", ""))
 	if err != nil {
 		return err
 	}
@@ -49,7 +49,7 @@ func saveToES(i interface{}, index string, id string) error {
 func deleteFromES(query elastic.Query, index string) error {
 	client, err := elastic.NewClient(
 		elastic.SetURL(ES_URL),
-		elastic.SetBasicAuth("elastic", "12345678"))
+		elastic.SetBasicAuth("elastic", ""))
 	if err != nil {
 		return err
 	}

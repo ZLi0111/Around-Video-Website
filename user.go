@@ -40,6 +40,7 @@ func checkUser(username, password string) (bool, error) {
 }
 
 func addUser(user *User) (bool, error) {
+
 	query := elastic.NewTermQuery("username", user.Username)
 	searchResult, err := readFromES(query, USER_INDEX)
 	if err != nil {
