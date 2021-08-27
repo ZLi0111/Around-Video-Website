@@ -1,5 +1,6 @@
 package main
 
+// init the ES from the GCP
 import (
 	"context"
 	"fmt"
